@@ -2,6 +2,9 @@
   "name": "TypeScript",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "build": "webpack"
+  },
   "author": "akki1027 <akki10271995@gmail.com>",
   "license": "MIT",
   "devDependencies": {
