@@ -1,14 +1,20 @@
 const path = require('path');
+const glob = require("glob");
+
+
+// src/js/以下のjsファイル全て
+const entries = glob.sync("./src/js/*.js").map(path => [path.replace('./src/js/', '').replace('.js', ''), path]);
+const entryObj = Object.fromEntries(entries);
 
 
 module.exports = {
     mode: 'production',
-    entry: './src/js/index.js',
+    entry: entryObj,
     output: {
         // 出力ファイルを置くディレクトリ
         path: path.resolve(__dirname, 'public/js'),
         // 出力ファイル名
-        filename: 'bundle.js',
+        filename: '[name].bundle.js',
     },
     module: {
         rules: [
