@@ -10,7 +10,10 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "./src/js/*.js": "prettier --write --ignore-unknown"
+    "./src/js/*.js": [
+      "prettier --write --ignore-unknown",
+      "eslint --fix"
+    ]
   },
   "author": "akki1027 <akki10271995@gmail.com>",
   "license": "MIT",

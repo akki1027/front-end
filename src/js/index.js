@@ -19,4 +19,5 @@ import { Calculator } from "./calculator.js";
     }
 
     console.log("husky");
+    console.log("eslint");
 }
