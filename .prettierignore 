@@ -1,0 +1,12 @@
+.bin/
+node_modules/
+
+package-lock.json
+package.json
+
+# Ignore artifacts:
+public/
+*.bundle.*
+
+# Ignore all HTML files:
+*.html

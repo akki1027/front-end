@@ -1,7 +1,6 @@
-'use strict';
+"use strict";
 
 import { Calculator } from "./calculator.js";
-
 
 {
     const calc = new Calculator();
@@ -11,11 +10,14 @@ import { Calculator } from "./calculator.js";
     console.log(calc.multiply(10, 2));
     console.log(calc.divide(10, 2));
 
-    $("button").click(function() {
+    $("button").click(function () {
         $("p").slideToggle("slow");
     });
 
-    for(let i = 0; i < 10; i++) {
+    for (let i = 0; i < 10; i++) {
         console.log(i);
     }
+
+    console.log("husky");
+    console.log("eslint");
 }
