@@ -1,5 +1,10 @@
 const path = require('path');
 const glob = require("glob");
+const webpack = require('webpack');
+const ESLintPlugin = require('eslint-webpack-plugin');
+const eslintOptions = {
+    fix: true
+};
 
 
 // src/js/以下のjsファイル全て
@@ -33,5 +38,17 @@ module.exports = {
                 }
             }
         ]
+    },
+    plugins: [
+        new webpack.ProvidePlugin({
+            // import or require を使わずにモジュールを読み込む
+            $: 'jquery',
+            jQuery: 'jquery',
+        }),
+        new ESLintPlugin(eslintOptions)
+    ],
+    externals: {
+        // bundleしないで、グローバルから使う
+        "jquery": "jQuery"
     }
 };
