@@ -1,12 +1,10 @@
-'use strict';
-
+"use strict";
 
 /**
  * @class
  * @description - 計算クラス
  */
 export class Calculator {
-
     /**
      *
      * @param {Number} x - 数字1
