@@ -6,7 +6,11 @@
     "build": "webpack",
     "start": "webpack --watch",
     "check": "eslint-config-prettier ./src/js/*.js",
-    "format": "prettier --write ./src/js/*.js"
+    "format": "prettier --write ./src/js/*.js",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "./src/js/*.js": "prettier --write --ignore-unknown"
   },
   "author": "akki1027 <akki10271995@gmail.com>",
   "license": "MIT",
@@ -20,6 +24,8 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-webpack-plugin": "^3.1.0",
     "glob": "^7.2.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^11.2.6",
     "prettier": "2.4.1",
     "webpack": "^5.58.2",
     "webpack-cli": "^4.9.0"
